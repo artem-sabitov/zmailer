@@ -46,17 +46,15 @@ class Mailer implements MailerInterface
 
     public function createMessage(MailPrototypeInterface $mailPrototype) : Message
     {
-        $recipients = $mailPrototype->getRecipient();
-        if (count($$recipients) !== 1) {
-            throw new RuntimeException()
-        }
+        $user = $mailPrototype->getRecipient();
+        $fullName = $user->getFirstname() . ' ' . $user->getLastname();
 
         $mail = new Mail\Message();
         $mail
             ->setSubject($mailPrototype->getSubject())
             ->setBody()
             ->setFrom($this->config['from'], $this->config['from_name'])
-            ->addTo();
+            ->addTo($user->getEmail(), $fullName);
 
     }
 
