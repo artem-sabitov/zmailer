@@ -1,0 +1,10 @@
+!.gitignore
+
+/vendor/
+
+/.idea
+/.env
+/phpcs.xml
+/phpunit.xml
+/clover.xml
+/coveralls-upload.json

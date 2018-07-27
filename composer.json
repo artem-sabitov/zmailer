@@ -1,0 +1,47 @@
+{
+  "name": "php/zmailer",
+  "type": "library",
+  "config": {
+    "sort-packages": true,
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://satis:Xpub7xtX@registry.dev.activelearn.ru:6485"
+    }
+  ],
+  "minimum-stability": "alpha",
+  "require": {
+    "php": "^7.2",
+    "psr/container": "^1.0",
+    "skillcup/php-user": "dev-master",
+    "zendframework/zend-mail": "^2.10"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "zendframework/zend-coding-standard": "^1.0",
+    "phpunit/phpunit": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zmailer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Zmailer\\": "test/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "upload-coverage": "coveralls -v",
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit --colors=always",
+    "test-coverage": "phpunit --coverage-clover clover.xml"
+  }
+}
