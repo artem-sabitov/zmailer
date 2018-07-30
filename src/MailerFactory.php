@@ -49,6 +49,6 @@ class MailerFactory
             );
         }
 
-        return new Mailer($transport, $renderer);
+        return new Mailer($config, $transport, $renderer);
     }
 }
