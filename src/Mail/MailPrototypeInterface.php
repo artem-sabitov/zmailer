@@ -12,7 +12,7 @@ interface MailPrototypeInterface
 
     public function getSubject() : string;
 
-    public function getBody() : string;
+    public function getBody() : ?string;
 
     public function getTemplate() : ?string;
 
