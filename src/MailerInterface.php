@@ -13,9 +13,4 @@ interface MailerInterface
      * @throws RuntimeException
      */
     public function send(Message $message) : void;
-
-    /**
-     * @throws RuntimeException
-     */
-    public function sendBatch(\ArrayObject $batch) : void;
 }
