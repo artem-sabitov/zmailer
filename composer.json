@@ -5,17 +5,10 @@
     "sort-packages": true,
     "secure-http": false
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "http://satis:Xpub7xtX@registry.dev.activelearn.ru:6485"
-    }
-  ],
   "minimum-stability": "alpha",
   "require": {
     "php": "^7.2",
     "psr/container": "^1.0",
-    "skillcup/php-user": "dev-master",
     "zendframework/zend-mail": "^2.10",
     "zendframework/zend-view": "^2.10"
   },

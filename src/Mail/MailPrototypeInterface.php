@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Zmailer\Mail;
 
-use User\User;
+use Zmailer\RecipientInterface;
 
 interface MailPrototypeInterface
 {
-    public function getRecipient() : User;
+    public function getRecipient() : RecipientInterface;
 
     public function getSubject() : string;
 

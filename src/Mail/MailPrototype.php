@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Zmailer\Mail;
 
-use User\User;
+use Zmailer\RecipientInterface;
 
 class MailPrototype implements MailPrototypeInterface
 {
     /**
-     * @var User
+     * @var RecipientInterface
      */
     protected $recipient;
 
@@ -35,14 +35,14 @@ class MailPrototype implements MailPrototypeInterface
 
     /**
      * MailPrototype constructor.
-     * @param User $recipient
+     * @param RecipientInterface $recipient
      * @param string $subject
      * @param null|string $body
      * @param null|string $template
      * @param array|null $parameters
      */
     public function __construct(
-        User $recipient,
+        RecipientInterface $recipient,
         string $subject,
         ?string $body = null,
         ?string $template = null,
@@ -55,7 +55,7 @@ class MailPrototype implements MailPrototypeInterface
         $this->parameters = $parameters;
     }
 
-    public function getRecipient() : User
+    public function getRecipient() : RecipientInterface
     {
         return $this->recipient;
     }

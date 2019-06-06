@@ -94,7 +94,7 @@ class Mailer implements MailerInterface
     /**
      * @throws RuntimeException
      */
-    public function sendBatch(\ArrayObject $batch) : array
+    public function sendBatch(MailBatch $batch) : array
     {
         $exceptions = [];
 

@@ -45,8 +45,7 @@ class ConfigProvider
     public function getMailerConfig() : array
     {
         return [
-            /* Values will depend on SMTP provider.
-             *
+            /*
              * Example: smtp.mailgun.org
              *
              * [
