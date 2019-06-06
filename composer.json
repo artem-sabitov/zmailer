@@ -1,5 +1,5 @@
 {
-  "name": "php/zmailer",
+  "name": "artem-sabitov/zmailer",
   "type": "library",
   "config": {
     "sort-packages": true,
